@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Aura Triasmara Tharozak</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --pink-primary: #FFB6C1;
+            --blue-navy: #1B4F72;
+            --blue-light: #EBF5FB;
+            --text-dark: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--blue-light);
+        }
+
+        /* --- Header & Nav --- */
+        header {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--blue-navy);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li { margin-left: 20px; }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--blue-navy);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover { color: var(--pink-primary); }
+
+        /* --- Hero Section --- */
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--pink-primary) 0%, var(--blue-navy) 100%);
+            color: var(--white);
+            padding-top: 80px;
+        }
+
+        .hero-content h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 20px; opacity: 0.9; }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--white);
+            color: var(--blue-navy);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        /* --- Global Sections --- */
+        section { padding: 80px 10% 40px; }
+        h2 { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            color: var(--blue-navy); 
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: var(--pink-primary);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* --- About Section --- */
+        .about-container {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .about-text h3 { color: var(--blue-navy); margin-top: 20px; }
+
+        /* --- Skills Section --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .skill-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .skill-card:hover { border-top: 5px solid var(--pink-primary); }
+        .skill-card i { font-size: 2rem; color: var(--blue-navy); margin-bottom: 10px; }
+
+        /* --- Experience/Portfolio --- */
+        .exp-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            padding: 20px;
+            border-left: 5px solid var(--blue-navy);
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* --- Contact --- */
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            text-decoration: none;
+            color: var(--blue-navy);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .contact-item i { margin-right: 8px; color: var(--pink-primary); }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--blue-navy);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul { display: none; } /* Sederhana: sembunyikan menu di mobile */
+            .hero-content h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Aura Triasmara.</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero-content">
+            <h1>Aura Triasmara Tharozak</h1>
+            <p>Safety Analysis | SMAN 1 Subang</p>
+            <a href="#experience" class="cta-btn">Lihat Portofolio</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <div class="about-container">
+            <p>Saya siswi SMA kelas XII yang berfokus pada pengembangan diri untuk masa depan. Proses belajar bagi saya adalah cara mengembangkan disiplin dan kemandirian sebagai bekal pendidikan tinggi.</p>
+            
+            <h3>Minat & Tujuan</h3>
+            <p>Memiliki minat besar dalam dunia <strong>Angkatan Udara</strong> dan kedirgantaraan. Saya bercita-cita mengabdi kepada negara melalui jalur militer yang menjunjung tinggi loyalitas dan profesionalisme.</p>
+            
+            <h3>Pendidikan</h3>
+            <p>SMAN 1 Subang (Kelas XII)</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Keahlian</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-search"></i>
+                <h3>Hard Skills</h3>
+                <p>Riset & Analisis Data, Academic Writing, Safety Analysis</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-users"></i>
+                <h3>Soft Skills</h3>
+                <p>Critical Thinking, Goal Oriented, Kerja Tim</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Personal Value</h3>
+                <p>Disiplin Tinggi, Tangguh, Loyalitas</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Pengalaman & Organisasi</h2>
+        <div class="exp-item">
+            <h4>Ketua Demo Ekstrakurikuler Paskibra 204</h4>
+            <p>Memimpin koordinasi dan pelaksanaan demonstrasi lapangan.</p>
+        </div>
+        <div class="exp-item">
+            <h4>Humas - Panitia HUT PASSAMNSA 204</h4>
+            <p>Mengelola komunikasi dan hubungan eksternal acara.</p>
+        </div>
+        <div class="exp-item">
+            <h4>SEKCAR - Panitia Bukber Angkatan SMA 1 Subang</h4>
+            <p>Bertanggung jawab dalam administrasi dan kesekretariatan.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Hubungi Saya</h2>
+        <div class="contact-links">
+            <a href="mailto:triasmaraaura@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://wa.me/62895404885448" class="contact-item"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://instagram.com/abstrlaa" class="contact-item"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Aura Triasmara Tharozak. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 5px;">Built with Passion for Indonesian Air Force Dreams.</p>
+    </footer>
+
+</body>
+</html>
